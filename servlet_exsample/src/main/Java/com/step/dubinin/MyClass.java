@@ -21,10 +21,11 @@ public class MyClass extends HttpServlet {
                 "<h1 >Welcome to online shop!!!</h1>\n" +
                 "<form action=\"/shop\" method=\"get\">\n" +
                 "    <input type=\"text\" name=\"userName\">\n" +
-                "    <h1></h1>\n" +
+                "    <h1></h1>\n" + "<p align=\"centr\"> <input type=\"checkbox\"name=\"check\"> Please?, push this</p>"+
                 "    <input type=\"submit\" value=\"submit\">\n" +
                 "</form>\n" +
                 "</body>\n" +
                 "</html>");
     }
+
 }

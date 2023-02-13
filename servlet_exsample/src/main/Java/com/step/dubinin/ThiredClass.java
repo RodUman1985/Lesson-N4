@@ -19,9 +19,12 @@ public class ThiredClass extends HttpServlet {
                 "</head>\n" +
                 "<body>\n" +
                 "\n" +
-                "<h1>Gidra Dominatus!!!</h1>\n" + Aucsilia.getUserScrol(req.getParameterValues("list")) +"\n"+
+                "<h1>Gidra Dominatus!!!</h1>\n" + Aucsilia.getUserScrol(req.getParameterValues("list"))
+                + Aucsilia.Calc(req.getParameterValues("list"))
+                +"\n"+
 
                 "</body>\n" +
                 "</html>");
     }
+
 }

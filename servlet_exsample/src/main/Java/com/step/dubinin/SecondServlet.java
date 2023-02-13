@@ -9,8 +9,10 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = ("/shop"))
 public class SecondServlet extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getSession().setAttribute("name", req.getParameter("userName"));
         resp.getWriter().println("<!DOCTYPE html>\n" +
                 "<html lang=\"en\">\n" +
                 "<head>\n" +
@@ -21,6 +23,7 @@ public class SecondServlet extends HttpServlet {
 
                 "<h1>\n" +
                 "\n" +
+                "<h1 >Dear</h1>\n"+  req.getSession().getAttribute("name")+
 
                 "\n" +
                 "</h1>\n" +
@@ -32,10 +35,10 @@ public class SecondServlet extends HttpServlet {
                         "        <option> power axe 700$</option>\n" +
                         "    </select>\n" +
                 "        \n" +
-                "    <input type=\"submit\" value=\"\">\n" +
+                "    <input type=\"submit\" value=\" go\">\n" +
                 "</body>\n" +
                 "</html>");
-        req.getSession().setAttribute("name", req.getParameter("userName"));
+
 
     }
 
